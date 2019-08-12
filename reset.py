@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 import ctrl2Roues
 import time
-def reset(etat):
-   ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
+ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
 
+def reset(etat):
    ctrl2Roues.GPIO_SETUP(0,0,0,1,0,0,0,1)
    time.sleep(0.2)
    ctrl2Roues.GPIO_SETUP(0,0,1,0,0,0,1,0)
