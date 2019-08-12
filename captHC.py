@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 
-
 def dist(nbre):
 
 #   GPIO.setmode(GPIO.BCM)
@@ -21,9 +20,6 @@ def dist(nbre):
 
    GPIO.output(Trig, False)
 
-#repet = 1
-#
-#for x in range (nbre): 
    debutImpulsion = "0"
    finImpulsion = "0"
 
@@ -47,10 +43,8 @@ def dist(nbre):
    else:
        print ("Distance :",distance,"cm")
 
-#   time.sleep(3)
-
    GPIO.output(Trig, False)
-#   GPIO.cleanup()
+#GPIO.cleanup()
 #exit(0)
 #dist(1)
 
