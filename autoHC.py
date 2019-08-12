@@ -14,22 +14,18 @@ def auto(limite = "10"):
    GPIO.setmode(GPIO.BOARD)
    GPIO.setwarnings(False)
 #print "+-----------------------------------------------------------+"
-#print "|   Mesure de distance par le capteur ultrasonore HC-SR04   |"
+#print "|   Mesure de distance par le capteur ultrasons HC-SR04   |"
 #print "+-----------------------------------------------------------+"
 
 
 
-   Trig = 16          # Entree Trig du HC-SR04 branchee au GPIO 23
-   Echo = 18          # Sortie Echo du HC-SR04 branchee au GPIO 24
+   Trig = 16          # Entree Trig du HC-SR04
+   Echo = 18          # Sortie Echo du HC-SR04
 
    GPIO.setup(Trig,GPIO.OUT)
    GPIO.setup(Echo,GPIO.IN)
 
    GPIO.output(Trig, False)
-
-#repet = 1
-#
-#for x in range (nbre): 
 
    while float(limite) < float(distance):
        print (distance)
