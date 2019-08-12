@@ -2,8 +2,6 @@ import time
 import RPi.GPIO as GPIO
 import keyboard
 
-
-
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
@@ -96,18 +94,4 @@ def TOURNER_DROITE(deg):
         GPIO_SETUP(1,0,0,0,1,0,0,0)
         degree -= 1
 
-#while True:
-#
-#   if keyboard.is_pressed('q'): # TURN LEFT 
-#        print('You Pressed Q Key!')
-#        TOURNER_GAUCHE(45)
-#   elif keyboard.is_pressed('d'): # TOURNER DROITE
-#        print('You p ze d lol')
-#        TOURNER_DROITE(45)
-#    elif keyboard.is_pressed('s'): # RECULER
-#        print('You Pressed S key')
-#        MARCHE_ARRIERE(20)
-#    elif keyboard.is_pressed('z'): # AVANCER
-#        print('You press Z')
-#        MARCHE_AVANT(20)
     GPIO_SETUP(0,0,0,0,0,0,0,0)
