@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
+
 def dist(nbre):
 
 #   GPIO.setmode(GPIO.BCM)
