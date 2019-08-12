@@ -2,7 +2,7 @@
 #import RPi.GPIO as GPIO
 import keyboard
 import sys
-from sh import parle
+#from sh import parle
 
 sys.path.append('/media/pi/COPYX/bin')
 import ctrl2Roues 
@@ -18,9 +18,12 @@ while True:
         print('GAUCHE')
         ctrl2Roues.TOURNER_GAUCHE(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
-   elif keyboard.is_pressed('e'): # parle.sh
-        print('Parle')
-        
+#   elif keyboard.release('q'):
+#        import reset
+#        reset.reset(0)
+#        ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
+#   elif keyboard.is_pressed('e'): # parle.sh
+#        print('Parle')   
 #        from sh import parle
 #        print sh.ifconfig("wlan0")
    elif keyboard.is_pressed('d'):
