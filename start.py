@@ -1,25 +1,22 @@
+#!/usr/bin/env python3
 # https://github.com/xavraspi/bin.git
 # Usage: Au clavier AZERTY z,s,q,d, y,n, m,t, r
 import time
 import keyboard
-import sys
-import ctrl2Roues 
+import sys, os
 import pymixer
-import captHC
-import autoHC 
-import reset
+import captHC, autoHC, reset, bmp280, ctrl2Roues
 
-#sys.path.append('/media/pi/COPYX/bin')
+path = "/home/pi/bin/start.py"
+chemin = os.path.dirname(path)
 
 def Action(action):
-        pymixer.Mixer("./sons/{}.mp3".format(action))
+        pymixer.Mixer("{}/sons/{}.mp3".format(chemin, action))
         print(action)
    
 while True:
 
-   if keyboard.is_pressed('a'):
-        print('a')
-   elif keyboard.is_pressed('q'):
+   if keyboard.is_pressed('q'):
         Action('TOURNER_GAUCHE')
         ctrl2Roues.TOURNER_GAUCHE(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
@@ -57,8 +54,14 @@ while True:
         Action('MESURE')
         captHC.dist(1) 
    elif keyboard.is_pressed('t'):
+        Action('TEMPRESSION')
+        bmp280.bmp280()            
+   elif keyboard.is_pressed('A'):
         Action('AUTO')
         autoHC.auto(15)            
+   elif keyboard.is_pressed('space'):
+        Action('meteo')
+        time.sleep(1)
    elif keyboard.is_pressed('r'):
         Action('RESET')
         reset.reset(0)
