@@ -14,6 +14,10 @@ Le fichier start.py appel tous les autres scripts:
 - pymixer.py :  lecture d'un sample lors de l'appele d'une commande 
                 Usage: pymixer.Mixer('output.mp3')
 
+- bmp280.py : capteur de temperature, pression (et humidité...)
+
+![bme-bmp280_GYBMEP](images/bme-bmp280_GYBMEP.jpg "bme-bmp280_GYBMEP")
+
 -	reset.py	: Heu... Reset
 
--> puis Bien des nouveaux scripts à venir...
+
