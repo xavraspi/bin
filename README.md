@@ -10,6 +10,10 @@ Le fichier start.py appel tous les autres scripts:
 -	autoHC.py	: avance un peu, s'arrete, prend la distance, et reavance ... jusqu'à ce que distance < distance donnée de sécurité collision
 
 ![HC-SR04_ultrasons](images/HC-SR04_100x100.jpg "HC-SR04_ultrasons")
+
+- pymixer.py :  lecture d'un sample lors de l'appele d'une commande 
+                Usage: pymixer.Mixer('output.mp3')
+
 -	reset.py	: Heu... Reset
 
-* puis Bien des nouveaux scripts à venir...
+-> puis Bien des nouveaux scripts à venir...
