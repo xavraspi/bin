@@ -6,34 +6,37 @@ import sys
 import ctrl2Roues 
 import pymixer
 import captHC
+import autoHC 
+import reset
 
 #sys.path.append('/media/pi/COPYX/bin')
 
+def Action(action):
+        pymixer.Mixer("./sons/{}.mp3".format(action))
+        print(action)
+   
 while True:
 
-   if keyboard.is_pressed('q'):
-        pymixer.Mixer('./sons/TOURNER_GAUCHE.mp3')
-        print('GAUCHE')
+   if keyboard.is_pressed('a'):
+        print('a')
+   elif keyboard.is_pressed('q'):
+        Action('TOURNER_GAUCHE')
         ctrl2Roues.TOURNER_GAUCHE(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
    elif keyboard.is_pressed('d'):
-        pymixer.Mixer('./sons/TOURNER_DROITE.mp3')
-        print('DROITE')
+        Action('TOURNER_DROITE')
         ctrl2Roues.TOURNER_DROITE(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
    elif keyboard.is_pressed('s'):
-        pymixer.Mixer('./sons/MARCHE_ARRIERE.mp3')
-        print('RECULER')
+        Action('MARCHE_ARRIERE')
         ctrl2Roues.MARCHE_ARRIERE(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
    elif keyboard.is_pressed('z'):
-        pymixer.Mixer('./sons/MARCHE_AVANT.mp3')
-        print('AVANCER')
+        Action('MARCHE_AVANT')
         ctrl2Roues.MARCHE_AVANT(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
    elif keyboard.is_pressed('n'): # NON
-        print('NO!')
-        pymixer.Mixer('./sons/NO.mp3')
+        Action('NO')
         ctrl2Roues.TOURNER_DROITE(6)
         ctrl2Roues.TOURNER_GAUCHE(6)
         ctrl2Roues.TOURNER_DROITE(6)
@@ -42,8 +45,7 @@ while True:
         ctrl2Roues.TOURNER_GAUCHE(12)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
    elif keyboard.is_pressed('y'): # YES 
-        print('YES!')
-        pymixer.Mixer('./sons/YES.mp3')
+        Action('YES')
         ctrl2Roues.MARCHE_AVANT(10)
         ctrl2Roues.MARCHE_ARRIERE(10)
         ctrl2Roues.MARCHE_AVANT(5)
@@ -52,18 +54,13 @@ while True:
         ctrl2Roues.MARCHE_ARRIERE(3)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
    elif keyboard.is_pressed('m'): # mesurer distance
-        pymixer.Mixer('./sons/MESURE.mp3')
-        print('MESURE')
+        Action('MESURE')
         captHC.dist(1) 
    elif keyboard.is_pressed('t'):
-        print('AUTO')
-        pymixer.Mixer('./sons/output.mp3')
-        import autoHC 
+        Action('AUTO')
         autoHC.auto(15)            
    elif keyboard.is_pressed('r'):
-        print('RESET')
-        pymixer.Mixer('./sons/RESET.mp3')
-        import reset
+        Action('RESET')
         reset.reset(0)
         
 

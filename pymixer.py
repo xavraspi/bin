@@ -15,5 +15,5 @@ def Mixer(son):
 #    exit(0)
 #print("done")
 
-Mixer('./sons/NO.mp3')
+#Mixer('./sons/NO.mp3')
 
