@@ -16,7 +16,7 @@ Le fichier start.py appel tous les autres scripts:
 
 - bmp280.py : capteur de temperature, pression (et humidité...)
 
-![bme-bmp280_GYBMEP](images/bme-bmb280_GYBMEP.jpg "bme-bmp280_GYBMEP")
+![bme-bmp280_GYBMEP](images/bme-bmb280_GYBMEP.jpeg "bme-bmp280_GYBMEP")
 
 -	reset.py	: Heu... Reset
 
