@@ -1,3 +1,6 @@
+# https://github.com/xavraspi/bin.git
+# Usage: captHC.dist(Nbre_de_mesures)
+
 import RPi.GPIO as GPIO
 import time
 

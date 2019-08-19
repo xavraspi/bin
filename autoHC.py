@@ -1,3 +1,6 @@
+# https://github.com/xavraspi/bin.git
+# Usage: autoHC.auto(Limite_collision)
+
 import RPi.GPIO as GPIO
 import time
 import ctrl2Roues

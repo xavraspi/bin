@@ -1,3 +1,6 @@
+# https://github.com/xavraspi/bin.git
+# Usage: reset.reset() pour tester les leds moteurs
+
 import RPi.GPIO as GPIO
 import ctrl2Roues
 import time

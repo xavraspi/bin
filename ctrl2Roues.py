@@ -1,3 +1,6 @@
+# https://github.com/xavraspi/bin.git
+# Usage: ctrl2Roues.GPIO_SETUP(a,b,c,d,e,f,g,h)
+
 import time
 import RPi.GPIO as GPIO
 import keyboard

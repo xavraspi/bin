@@ -1,16 +1,11 @@
-#import time
-#import RPi.GPIO as GPIO
+# https://github.com/xavraspi/bin.git
+# Usage: Au clavier AZERTY z,s,q,d, y,n, m,t, r
+import time
 import keyboard
 import sys
-#from sh import parle
-
-sys.path.append('/media/pi/COPYX/bin')
 import ctrl2Roues 
-# Usage: ctrl2Roues.MARCHE_AVANT(degrees)
-# 2 roues ULN2003 Pin roue_gauche 7,11,13,15 ; roue_droite 32,36,38,40
 
-# sys.path.append('/home/pi/bin/python/HC-SR04')
-
+#sys.path.append('/media/pi/COPYX/bin')
 
 while True:
 
@@ -18,14 +13,6 @@ while True:
         print('GAUCHE')
         ctrl2Roues.TOURNER_GAUCHE(20)
         ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
-#   elif keyboard.release('q'):
-#        import reset
-#        reset.reset(0)
-#        ctrl2Roues.GPIO_SETUP(0,0,0,0,0,0,0,0)
-#   elif keyboard.is_pressed('e'): # parle.sh
-#        print('Parle')   
-#        from sh import parle
-#        print sh.ifconfig("wlan0")
    elif keyboard.is_pressed('d'):
         print('DROITE')
         ctrl2Roues.TOURNER_DROITE(20)
