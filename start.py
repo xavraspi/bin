@@ -9,9 +9,10 @@ import captHC, autoHC, reset, bmp280, ctrl2Roues
 
 path = "/home/pi/bin/start.py"
 chemin = os.path.dirname(path)
+theme = "thm_normal/"
 
 def Action(action):
-        pymixer.Mixer("{}/sons/{}.mp3".format(chemin, action))
+        pymixer.Mixer("{}/sons/{}{}.mp3".format(chemin, theme, action))
         print(action)
    
 while True:
