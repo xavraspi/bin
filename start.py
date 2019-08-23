@@ -9,7 +9,7 @@ import captHC, autoHC, reset, bmp280, ctrl2Roues
 
 path = "/home/pi/bin/start.py"
 chemin = os.path.dirname(path)
-theme = "thm_normal/"
+theme = "thm_starwars/"
 
 def Action(action):
         pymixer.Mixer("{}/sons/{}{}.mp3".format(chemin, theme, action))
